@@ -23,7 +23,7 @@
             <a class="nav-link" href="#">Ajuda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"
+            <a class="nav-link" @click="$router.push('/cadastro')"
               ><i class="fa-solid fa-user-plus"></i>Signup</a
             >
           </li>
