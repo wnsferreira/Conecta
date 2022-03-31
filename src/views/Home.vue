@@ -32,10 +32,20 @@
       </div>
     </div>
   </nav>
+
+	<main>
+		<section><HeroCarousel/></section>
+	</main>
+
 </template>
 
 <script>
-export default {};
+import HeroCarouselVue from './HeroCarousel.vue';
+
+export default {
+	name: HeroCarouselVue,
+	components: HeroCarouselVue
+};
 </script>
 
 <style scoped>
