@@ -1,31 +1,32 @@
 <template>
     <NavVue/>
+    <div class="col img-container">
+        <img id="login-img" src="../assets/LoginImg.jpg">
+    </div>
     <main class="container">
-        <div class="row align-items-center">
-                <div class="col">
+        <div class="row justify-content-center">
+                <div class="col-6">
                     <form>
-                        <img class="mb-4" src="../assets/Logo-Conecta.png" alt="" width="70" height="70">
-                            <h1 class="h3 mb-3 fw-normal">Faça Login</h1>
+                            <h1 class="h3 m-4 fw-normal">Faça Login</h1>
 
-                            <div class="form-floating">
+                            <div class="form-floating m-3">
                                 <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
                                 <label for="floatingInput">Email address</label>
                             </div>
-                            <div class="form-floating">
+                            <div class="form-floating m-3">
                                 <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
                                 <label for="floatingPassword">Password</label>
                             </div>
-                            <div class="checkbox mb-3">
+                            <div class="checkbox m-3">
                                 <label>
-                                <input type="checkbox" value="remember-me"> Remember me
+                                <input type="checkbox" value="remember-me"> Lembrar
                                 </label>
                             </div>
-                            <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-                            <p class="mt-5 mb-3 text-muted">© 2017–2021</p>
+                            <div class="d-flex flex-column align-items-center">
+                                <button class="w-50 btn btn-lg btn-primary m-2" type="submit">Entrar</button>
+                                <button class="w-30 btn btn-md btn-link" type="button" @click="$router.push('/')">Voltar</button>
+                            </div>
                     </form>
-                </div>
-                <div class="col img-container">
-                    <img src="../assets/LoginImg.jpg">
                 </div>
             </div>
     </main>
@@ -42,7 +43,12 @@ export default {
 </script>
 
 <style>
-/* .img-container{
-    height: 50%;
-} */
+.img-container{
+    max-height: 400px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
 </style>
