@@ -1,29 +1,18 @@
 <template>
-  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+<div id="hero" class="d-flex justify-content-center align-items-center flex-wrap" style="height:500px">
+  <div id="box-hero" class="w-75 h-75 row pe-lg-0 pt-lg-5 rounded-3 border shadow-lg bg-light">
+      <div class="col-lg-4 p-2 mb-3">
+          <img class="w-50" src="../assets/Logo-Conecta.svg" alt="" width="720">
+      </div>
+      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+        <h1 class="display-4 fw-bold lh-1">Chegou o Conecta</h1>
+        <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur libero amet ex asperiores, vero veniam! Consequuntur cum aspernatur fugiat atque necessitatibus quidem ea! Praesentium labore officiis repellendus.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-center m-5">
+          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" @click="$router.push('/cadastro')">Cadastre-se</button>
+          <button type="button" class="btn btn-outline-secondary btn-lg px-4" @click="$router.push('/login')">Faça Login</button>
+        </div>
+      </div>
   </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active"  data-bs-interval="5000">
-      <img src="../assets/a.jpg" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="../assets/b.jpg" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="../assets/c.jpg" class="d-block w-100" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
 </div>
 </template>
 
@@ -32,3 +21,15 @@ export default {
   name: "Hero",
 };
 </script>
+
+<style>
+ #hero{
+   background-image: url('../assets/HeroImg.jpg');
+   background-repeat: no-repeat;
+   background-size: 100%;
+ }
+
+ #box-hero{
+   opacity: 0.90;
+ }
+</style>

@@ -1,17 +1,13 @@
 <template>
     <NavVue />
-    <main>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-8">
-                    <h2>Crie Sua Conta</h2>
-                    <SignUpClient />
-                </div>
-                <div class="col-4">
-                    <img class="w-100" style="height:800px" src="../assets/cadastroimg.png">
-                </div>
+    <main class="container-fluid">
+            <div class="container-half d-flex flex-column justify-content-center">
+                <h2 class="mb-5">Crie Sua Conta</h2>
+                <SignUpClient class="w-75 align-self-center"/>
             </div>
-        </div>
+            <div class="container-half img-half vh-100">
+                    <!-- <img src="../assets/cadastroimg.png"> -->
+            </div>
     </main>
     <FooterVue />
 </template>
@@ -27,5 +23,19 @@ import SignUpClient from '../components/SignUpClient.vue'
 
 </script>
 
-<style>
+<style scoped>
+
+.container-fluid{
+    display:flex;
+}
+
+.container-half {
+    flex: 1;
+}
+
+.img-half {
+    overflow: hidden;
+    background-color:aquamarine
+}
+
 </style>
