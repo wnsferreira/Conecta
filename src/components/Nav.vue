@@ -1,7 +1,7 @@
 <template>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="#"  @click="$router.push('/')">
         <img src="../assets/Logo-Conecta.png" alt="" style="width: 30px" />
       </a>
       <!-- <span class="navbar-toggler-icon"></span> -->
