@@ -1,5 +1,5 @@
 <template>
-  <form class="row g-3 needs-validation" novalidate>
+  <form @submit.prevent="addUser" class="row g-3 needs-validation" novalidate>
     <div class="col-md-6">
       <div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
@@ -20,49 +20,49 @@
       </div>
                           <div class="col-md-6">
                           <label for="validateName" class="form-label">Nome Completo</label>
-                          <input type="text" class="form-control" id="validationCustom01" value="" required>
+                          <input v-model="form.name" type="text" class="form-control" id="validationCustom01" required>
                           <div class="valid-feedback">
                             Looks good!
                           </div>
                         </div>
                         <div class="col-md-6">
                           <label for="validateCPF" class="form-label">CPF</label>
-                          <input type="text" class="form-control" id="validationCustom02" value="" required>
+                          <input v-model="form.cpf" type="text" class="form-control" id="validationCustom02" required>
                           <div class="valid-feedback">
                             Looks good!
                           </div>
                         </div>
                         <div class="col-md-6">
                           <label for="validateEmail" class="form-label">E-Mail</label>
-                            <input type="email" class="form-control" id="validationCustom02" value="" required>
+                            <input v-model="form.email" type="email" class="form-control" id="validationCustom02" required>
                             <div class="invalid-feedback">
                               Please choose a username.
                             </div>
                           </div>
                         <div class="col-md-6">
                           <label for="validationCustom03" class="form-label">Celular</label>
-                          <input type="text" class="form-control" id="validationCustom03" required>
+                          <input v-model="form.phone" type="text" class="form-control" id="validationCustom03" required>
                           <div class="invalid-feedback">
                             Please provide a valid city.
                           </div>
                         </div>
                         <div class="col-md-6">
                           <label for="validationCustom04" class="form-label">Senha</label>
-                            <input type="password" class="form-control" id="validationCustom03" required>
+                            <input v-model="form.password" type="password" class="form-control" id="validationCustom03" required>
                           <div class="invalid-feedback">
                             Please select a valid state.
                           </div>
                         </div>
                         <div class="col-md-6">
                           <label for="validationCustom05" class="form-label">Confirmar Senha</label>
-                          <input type="password" class="form-control" id="validationCustom03" required>
+                          <input v-model="form.password" type="password" class="form-control" id="validationCustom03" required>
                           <div class="invalid-feedback">
                             Please provide a valid zip.
                           </div>
                         </div>
                         <div class="col-12">
                           <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <input v-model="form.agreement" class="form-check-input" type="checkbox" id="invalidCheck" required>
                             <label class="form-check-label" for="invalidCheck">
                               Li e estou de acordo com os termos.
                             </label>
@@ -79,9 +79,34 @@
 
 <script>
 // import SignUpPartner from './SignUpPartner.vue'
-
 export default {
   name: "SignUpClient",
   // components: { SignUpPartner }
-};
+  data() {
+    return {
+      form: {
+        name: "",
+        cpf: "",
+        email: "",
+        phone: "",
+        password: "",
+        agreement: "",
+      }
+    }
+  },
+  methods: {
+    addUser() {
+      this.$store.dispatch('commitUser', {
+        name:this.form.name,
+        cpf:this.form.cpf,
+        email:this.form.email,
+        phone:this.form.phone,
+        password:this.form.password,
+        agreement:this.form.agreement,
+      })
+      this.$router.push('/usuarios')
+      console.log("ADICIONOU")
+    },
+  }
+}
 </script>
