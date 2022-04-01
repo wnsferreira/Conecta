@@ -2,7 +2,7 @@
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="../assets/logo.png" alt="" style="width: 30px" />
+        <img src="../assets/Logo-Conecta.png" alt="" style="width: 30px" />
       </a>
       <!-- <span class="navbar-toggler-icon"></span> -->
       <div class="collapse navbar-collapse">
@@ -23,12 +23,12 @@
             <a class="nav-link" href="#">Ajuda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" @click="$router.push('/cadastro')"
+            <a class="nav-link" href="#" @click="$router.push('/cadastro')"
               ><i class="fa-solid fa-user-plus"></i>Signup</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"
+            <a class="nav-link" href="#" @click="$router.push('/login')"
               ><i class="fa-solid fa-right-to-bracket"></i>Signin</a
             >
           </li>

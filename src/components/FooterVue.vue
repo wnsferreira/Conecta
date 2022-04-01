@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div style="background-color: #eeeeee" class="fixed-bottom">
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias saepe, labore iusto voluptates.</p>
     </div>
 </template>
