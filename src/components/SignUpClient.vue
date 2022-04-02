@@ -1,15 +1,5 @@
 <template>
   <form @submit.prevent="addUser" class="row g-3 needs-validation" novalidate>
-    <div class="col-md-6">
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-        <label class="form-check-label" for="inlineRadio1">Cliente</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-        <label class="form-check-label" for="inlineRadio2">Parceiro</label>
-      </div>
-    </div>
       <div class="col-md-6">
         <select class="form-select form-select-sm" aria-label=".form-select-sm example">
           <option selected>Tipo de Serviço</option>
@@ -34,28 +24,28 @@
                         </div>
                         <div class="col-md-6">
                           <label for="validateEmail" class="form-label">E-Mail</label>
-                            <input v-model="form.email" type="email" class="form-control" id="validationCustom02" required>
+                            <input v-model="form.email" type="email" class="form-control" id="validationCustom03" required>
                             <div class="invalid-feedback">
                               Please choose a username.
                             </div>
                           </div>
                         <div class="col-md-6">
                           <label for="validationCustom03" class="form-label">Celular</label>
-                          <input v-model="form.phone" type="text" class="form-control" id="validationCustom03" required>
+                          <input v-model="form.phone" type="text" class="form-control" id="validationCustom04" required>
                           <div class="invalid-feedback">
                             Please provide a valid city.
                           </div>
                         </div>
                         <div class="col-md-6">
                           <label for="validationCustom04" class="form-label">Senha</label>
-                            <input v-model="form.password" type="password" class="form-control" id="validationCustom03" required>
+                            <input v-model="form.password" type="password" class="form-control" id="validationCustom05" required>
                           <div class="invalid-feedback">
                             Please select a valid state.
                           </div>
                         </div>
                         <div class="col-md-6">
                           <label for="validationCustom05" class="form-label">Confirmar Senha</label>
-                          <input v-model="form.password" type="password" class="form-control" id="validationCustom03" required>
+                          <input v-model="form.password" type="password" class="form-control" id="validationCustom06" required>
                           <div class="invalid-feedback">
                             Please provide a valid zip.
                           </div>
@@ -78,10 +68,8 @@
 </template>
 
 <script>
-// import SignUpPartner from './SignUpPartner.vue'
 export default {
   name: "SignUpClient",
-  // components: { SignUpPartner }
   data() {
     return {
       form: {
@@ -105,7 +93,6 @@ export default {
         agreement:this.form.agreement,
       })
       this.$router.push('/usuarios')
-      console.log("ADICIONOU")
     },
   }
 }

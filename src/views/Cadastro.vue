@@ -3,7 +3,7 @@
     <main class="container-fluid">
             <div class="container-half d-flex flex-column justify-content-center">
                 <h2 class="mb-5">Crie Sua Conta</h2>
-                <SignUpClient class="w-75 align-self-center"/>
+                <ClientTypeSelector class="w-75 align-self-center"/>
             </div>
             <div class="container-half img-half vh-100">
                     <!-- <img src="../assets/cadastroimg.png"> -->
@@ -15,10 +15,11 @@
 <script>
 import NavVue from '../components/Nav.vue'
 import FooterVue from '../components/FooterVue.vue';
-import SignUpClient from '../components/SignUpClient.vue'
+import ClientTypeSelector from '../components/ClientTypeSelector';
+// import SignUpClient from '../components/SignUpClient.vue'
 
     export default {
-        components: { NavVue, FooterVue, SignUpClient}
+        components: { NavVue, FooterVue, ClientTypeSelector}
     }
 
 </script>
