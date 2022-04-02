@@ -6,7 +6,7 @@
     <main class="container">
         <div class="row justify-content-center">
                 <div class="col-6">
-                    <form>
+                    <form @submit.prevent="">
                             <h1 class="h3 m-4 fw-normal">Faça Login</h1>
 
                             <div class="form-floating m-3">
@@ -38,8 +38,17 @@ import NavVue from '../components/Nav.vue'
 import FooterVue from '../components/FooterVue.vue';
 
 export default {
-    components: { NavVue, FooterVue }
+    components: { NavVue, FooterVue },
+
+    methods: {
+        estadoLogado() {
+            
+        }
+    }
+
 }
+
+
 </script>
 
 <style>
