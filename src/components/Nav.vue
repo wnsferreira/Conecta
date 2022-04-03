@@ -22,8 +22,8 @@
           />
           <button class="btn btn-outline-primary" type="submit">Buscar</button>
         </form>
-          <Logado />
-          <Deslogado v-if="isLogged" />
+          <Deslogado v-if="userState" />
+          <Logado v-else />
       </div>
     </div>
   </nav>
@@ -35,11 +35,11 @@ export default {
 	name: "NavVue",
   components: { Logado, Deslogado},
 
-  data() {
-    return {
-      isLogged: false
+  methods: {
+    userState() {
+      return this.$state.isLogged
     }
-  },
+  }
 	
 }
 </script>

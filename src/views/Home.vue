@@ -29,12 +29,7 @@
     <section>
       <h2 class="m-4">Serviços</h2>
       <div class="d-flex flex-wrap justify-content-center mb-5">
-		<Card />
-		<Card />
-		<Card />
-		<Card />
-		<Card />
-		<Card />
+      <Card v-for="c in listCards" :card="c" :key="c.id" />
       </div>
     </section>
   </main>
@@ -50,7 +45,13 @@ import Card from '../components/Card.vue'
 import FooterVue from '../components/FooterVue.vue'
 
 export default {
-	components: { NavVue, Hero, Card, FooterVue }
+  name: 'Home',
+	components: { NavVue, Hero, Card, FooterVue },
+  computed: {
+    listCards() {
+      return this.$store.getters.getServices
+    } 
+  }
 }
 </script>
 
