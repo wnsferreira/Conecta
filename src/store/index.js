@@ -95,7 +95,7 @@ export default createStore({
             },
             {
                 id: 9,
-                service: 'Gastonomia',
+                service: 'Gastronomia',
                 name: 'Frutos do mar e etc',
                 image: 'https://bstatic.com/xdata/images/xphoto/1182x887/30588778.jpg?k=dc935ba74712bf06c0fc193784b3eca4c7449791fb1c29efccd6bac80ce59827&o=?size=S',
                 abstract: 'Venha conhecer nosso famoso peixe ensopado',
