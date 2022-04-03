@@ -72,8 +72,8 @@ export default {
 		return this.$store.getters.getServices
     }, 
 	filterCategory() {
-		let makeThisFilfer = this.listCards
-		return  makeThisFilfer.filter(c => c.service == this.categoria)
+		let makeThisFilter = this.listCards
+		return  makeThisFilter.filter(c => c.service == this.categoria)
 		}
 	},
 }

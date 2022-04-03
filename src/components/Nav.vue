@@ -37,7 +37,7 @@ export default {
 
   methods: {
     userState() {
-      return this.$state.isLogged
+      return this.$store.isLogged
     }
   }
 	
