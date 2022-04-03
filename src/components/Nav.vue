@@ -22,7 +22,7 @@
           />
           <button class="btn btn-outline-primary" type="submit">Buscar</button>
         </form>
-          <Deslogado v-if="userState" />
+          <Deslogado v-if="!this.$store.getters.isLoged" />
           <Logado v-else />
       </div>
     </div>
@@ -37,7 +37,7 @@ export default {
 
   methods: {
     userState() {
-      return this.$store.isLogged
+      return this.$store.getters.isLoged
     }
   }
 	

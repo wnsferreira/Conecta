@@ -135,16 +135,18 @@ export default createStore({
     getters: {
         getUser: state => state.users,
         getPartner: state => state.partners,
-        getServices: state => state.services
+        getServices: state => state.services,
+        getIsLoged: state => state.isLogged
     },
     mutations: {
         addUser: (state, newUser) => state.users.push(newUser),
         addPartner: (state, newPartner) => state.partners.push(newPartner),
-        toogleLogin: (state) => state.isLogged = !state.isLogged
+        toggleLogin: (state) => state.isLogged = !state.isLogged
     },
     actions: {
         commitUser: ({ commit }, newUser ) => commit('addUser', newUser),
         commitPartner: ({ commit }, newPartner ) => commit('addPartner', newPartner),
+        commitLogin: ({ commit }) => commit('toggleLogin')
 
     }, 
 })

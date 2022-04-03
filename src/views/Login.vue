@@ -65,7 +65,8 @@ export default {
             for(let i in users){
 
                 if (users[i].email == this.email && users[i].password == this.password) {
-                    this.$store.dispatch('toggleLogin')
+                    this.$store.dispatch('commitLogin')
+                    console.log(this.$store.getters.getIsLoged)
                     return this.$router.push('/')
 
                 }    
