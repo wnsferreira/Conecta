@@ -6,15 +6,15 @@
     <main class="container">
         <div class="row justify-content-center">
                 <div class="col-6">
-                    <form @submit.prevent="">
+                    <form @submit.prevent="logar">
                             <h1 class="h3 m-4 fw-normal">Faça Login</h1>
 
                             <div class="form-floating m-3">
-                                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                <input type="email" class="form-control" v-model="email" id="floatingInput" placeholder="name@example.com">
                                 <label for="floatingInput">Email address</label>
                             </div>
                             <div class="form-floating m-3">
-                                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                                <input type="password" class="form-control" v-model="password" id="floatingPassword" placeholder="Password">
                                 <label for="floatingPassword">Password</label>
                             </div>
                             <div class="checkbox m-3">
@@ -30,7 +30,7 @@
                 </div>
             </div>
     </main>
-    <FooterVue/>
+    <FooterVue />
 </template>
 
 <script>
@@ -38,15 +38,46 @@ import NavVue from '../components/Nav.vue'
 import FooterVue from '../components/FooterVue.vue';
 
 export default {
+    
     components: { NavVue, FooterVue },
+
+    data() {
+        return{
+
+            email: "",
+            password: ""
+        
+
+        } 
+    },
 
     methods: {
         estadoLogado() {
             
+        },
+        logar() {
+ 
+            let users = [] 
+            users = this.$store.getters.getUser
+            
+            console.log(users)
+
+            for(let i in users){
+
+                if (users[i].email == this.email && users[i].password == this.password) {
+                    this.$store.dispatch('toggleLogin')
+                    return this.$router.push('/')
+
+                }    
+            }
+                
+            window.alert("Senha ou usuário inválidos")
+
+            }
+            
         }
     }
 
-}
 
 
 </script>

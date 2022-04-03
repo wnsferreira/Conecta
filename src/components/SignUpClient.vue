@@ -92,7 +92,7 @@ export default {
         password:this.form.password,
         agreement:this.form.agreement,
       })
-      this.$router.push('/usuarios')
+      this.$router.push('/login')
     },
   }
 }

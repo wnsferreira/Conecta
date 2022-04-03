@@ -49,7 +49,7 @@
     </section>
   </main>
   <footer>
-	<FooterVue />
+	  <FooterVue />
   </footer>
 </template>
 

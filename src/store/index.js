@@ -8,9 +8,9 @@ export default createStore({
                 id: 1,
                 name: 'Fulano',
                 cpf: "",
-                email: "",
+                email: "jose@couves.com",
                 phone: "",
-                password: "",
+                password: "123",
                 agreement: "",
             }
         ],
@@ -139,7 +139,8 @@ export default createStore({
     },
     mutations: {
         addUser: (state, newUser) => state.users.push(newUser),
-        addPartner: (state, newPartner) => state.partners.push(newPartner)
+        addPartner: (state, newPartner) => state.partners.push(newPartner),
+        toogleLogin: (state) => state.isLogged = !state.isLogged
     },
     actions: {
         commitUser: ({ commit }, newUser ) => commit('addUser', newUser),
