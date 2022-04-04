@@ -43,11 +43,8 @@ export default {
 
     data() {
         return{
-
             email: "",
             password: ""
-        
-
         } 
     },
 
@@ -58,15 +55,21 @@ export default {
         logar() {
  
             let users = [] 
+            let partners = []
+            let allUsers = []
+
             users = this.$store.getters.getUser
-            
+            partners = this.$store.getters.getPartner
+            allUsers = [ ...users, ...partners]
+
             console.log(users)
+            console.log(partners)
 
-            for(let i in users){
+            for(let i in allUsers){
 
-                if (users[i].email == this.email && users[i].password == this.password) {
+                if (allUsers[i].email == this.email && allUsers[i].password == this.password) {
                     this.$store.dispatch('commitLogin')
-                    console.log(this.$store.getters.getIsLoged)
+                  
                     return this.$router.push('/')
 
                 }    

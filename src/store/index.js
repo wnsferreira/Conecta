@@ -25,6 +25,16 @@ export default createStore({
                 password: "",
                 agreement: "",
 
+            },
+            {
+                id: 2,
+                name: "empresa x",
+                cnpj: "",
+                email: "empresa@email.com",
+                phone: "",
+                password: "123",
+                agreement: "",
+
             }
         ], 
         
