@@ -1,4 +1,5 @@
 <template>
+  <ToggleNav id="navbarToggleExternalContent" />
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"  @click="$router.push('/')">
@@ -25,15 +26,19 @@
           <Deslogado v-if="!this.$store.getters.isLoged" />
           <Logado v-else />
       </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
     </div>
   </nav>
 </template>
 <script>
 import Logado from './Logado.vue'
 import Deslogado from './Deslogado.vue'
+import ToggleNav from './ToggleNav.vue'
 export default {
 	name: "NavVue",
-  components: { Logado, Deslogado},
+  components: { Logado, Deslogado, ToggleNav },
 
   methods: {
     userState() {
@@ -43,3 +48,7 @@ export default {
 	
 }
 </script>
+
+<style scoped>
+
+</style>

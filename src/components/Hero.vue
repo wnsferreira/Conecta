@@ -4,7 +4,7 @@
       <div class="col-lg-4 p-2 mb-3">
           <img class="w-50" src="../assets/Logo-Conecta.svg" alt="" width="720">
       </div>
-      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3" id="hero-content">
         <h1 class="display-4 fw-bold lh-1">Chegou o Conecta</h1>
         <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur libero amet ex asperiores, vero veniam! Consequuntur cum aspernatur fugiat atque necessitatibus quidem ea! Praesentium labore officiis repellendus.</p>
         <div class="d-grid gap-2 d-md-flex justify-content-center m-5">
@@ -23,6 +23,11 @@ export default {
 </script>
 
 <style>
+@media (max-width: 960px ) {
+  #hero-content {
+    display: none;
+  }
+}
  #hero{
    background-image: url('../assets/HeroImg.jpg');
    background-repeat: no-repeat;

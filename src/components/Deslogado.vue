@@ -27,5 +27,9 @@
 </script>
 
 <style scoped>
-
+	@media (min-width: 960px) {
+		.nav-toggle{
+			display: none;
+		}
+	}
 </style>
