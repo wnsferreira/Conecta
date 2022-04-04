@@ -49,9 +49,6 @@ export default {
     },
 
     methods: {
-        estadoLogado() {
-            
-        },
         logar() {
  
             let users = [] 
@@ -61,9 +58,6 @@ export default {
             users = this.$store.getters.getUser
             partners = this.$store.getters.getPartner
             allUsers = [ ...users, ...partners]
-
-            console.log(users)
-            console.log(partners)
 
             for(let i in allUsers){
 

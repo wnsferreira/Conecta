@@ -6,7 +6,6 @@
                 <ClientTypeSelector class="w-75 align-self-center"/>
             </div>
             <div class="container-half img-half vh-100">
-                    <!-- <img src="../assets/cadastroimg.png"> -->
             </div>
     </main>
     <FooterVue />
@@ -16,7 +15,6 @@
 import NavVue from '../components/Nav.vue'
 import FooterVue from '../components/FooterVue.vue';
 import ClientTypeSelector from '../components/ClientTypeSelector';
-// import SignUpClient from '../components/SignUpClient.vue'
 
     export default {
         components: { NavVue, FooterVue, ClientTypeSelector}
