@@ -50,7 +50,6 @@ export default {
 
     methods: {
         logar() {
- 
             let users = [] 
             let partners = []
             let allUsers = []
@@ -65,7 +64,6 @@ export default {
                     this.$store.dispatch('commitLogin')
                     console.log(this.$store.getters.getIsLoged)
                     return this.$router.push('/')
-
                 }    
             }
                 

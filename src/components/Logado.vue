@@ -25,9 +25,10 @@
 		methods: {
 			logout() {
 				this.$store.dispatch('commitLogin') 
+				window.alert('Usuario deslogado!')
 				return this.$router.push('/') 
+			},
 		}
-  }
 	}
 </script>
 
