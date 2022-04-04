@@ -35,10 +35,9 @@
 <script>
 import Logado from './Logado.vue'
 import Deslogado from './Deslogado.vue'
-import ToggleNav from './ToggleNav.vue'
 export default {
 	name: "NavVue",
-  components: { Logado, Deslogado, ToggleNav },
+  components: { Logado, Deslogado },
 
 	
 }

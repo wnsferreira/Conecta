@@ -8,7 +8,7 @@
 		</li>
 		<li class="nav-item">
 		<a class="nav-link" href="#" 
-			><i class="fa-solid fa-user me-2" style="color:#007bc3"></i>User</a
+			><i class="fa-solid fa-user me-2" style="color:#007bc3"></i>Usuário</a
 		>
 		</li>
 		<li class="nav-item">
@@ -28,6 +28,7 @@
 				window.alert('Usuario deslogado!')
 				return this.$router.push('/') 
 			},
+			
 		}
 	}
 </script>
