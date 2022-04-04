@@ -2,7 +2,7 @@
 	<NavVue />
 	<main>
 		<section class="container">
-			<div class="row align-items-center">
+			<div id="sorte-content" class="row align-items-center d-flex flex-wrap">
 				<h2>Sugestões Perto de Você</h2>
 				<div class="col">
 					<h3>Hospedagem</h3>
@@ -50,4 +50,14 @@ import FooterVue from '../components/FooterVue.vue';
 
 <style scoped>
 
+@media (max-width: 960px ) {
+ #sorte-content{
+	display: flex;
+	flex-direction:column;
+ } 
+ 
+ iframe {
+	width: 100%;
+  }
+}
 </style>
