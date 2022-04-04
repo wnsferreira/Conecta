@@ -12,7 +12,7 @@
 		>
 		</li>
 		<li class="nav-item">
-		<a class="nav-link" href="#" @click="$router.push('/')"
+		<a class="nav-link" href="#" @click="logout"
 			><i class="fa-solid fa-arrow-right-from-bracket me-2" style="color:#007bc3"></i>Sair</a
 		>
 		</li>
@@ -21,8 +21,13 @@
 
 <script>
 	export default {
-		name: "Logado"
-		
+		name: "Logado",
+		methods: {
+			logout() {
+				this.$store.dispatch('commitLogin') 
+				return this.$router.push('/') 
+		}
+  }
 	}
 </script>
 

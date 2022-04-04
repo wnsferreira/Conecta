@@ -63,7 +63,7 @@ export default {
 
                 if (allUsers[i].email == this.email && allUsers[i].password == this.password) {
                     this.$store.dispatch('commitLogin')
-                  
+                    console.log(this.$store.getters.getIsLoged)
                     return this.$router.push('/')
 
                 }    

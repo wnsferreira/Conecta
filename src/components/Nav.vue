@@ -23,7 +23,7 @@
           />
           <button class="btn btn-outline-primary" type="submit">Buscar</button>
         </form>
-          <Deslogado v-if="!this.$store.getters.isLoged" />
+          <Deslogado v-if="!this.$store.getters.getIsLoged" />
           <Logado v-else />
       </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,11 +40,6 @@ export default {
 	name: "NavVue",
   components: { Logado, Deslogado, ToggleNav },
 
-  methods: {
-    userState() {
-      return this.$store.getters.isLoged
-    }
-  }
 	
 }
 </script>
