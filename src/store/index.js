@@ -15,7 +15,6 @@ export default createStore({
             }
         ],
         partners: [
-
             {
                 id: 1,
                 name: "",
@@ -157,6 +156,5 @@ export default createStore({
         commitUser: ({ commit }, newUser ) => commit('addUser', newUser),
         commitPartner: ({ commit }, newPartner ) => commit('addPartner', newPartner),
         commitLogin: ({ commit }) => commit('toggleLogin')
-
     }, 
 })
